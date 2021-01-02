@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.row {
+  display: flex;
+  padding: 0px;
+  height: 50px;
+}
+
+.column {
+  padding: 0px;
+}
+
+.gameboard {
+  border: 20px solid gray;
+  max-width: 650px;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-image: "./Grid/background.jpg";
+}

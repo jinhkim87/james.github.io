@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="./script.js"></script>
+    <title>Omok</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+<body>
+    <h1>Omok</h1>
+
+    <h3 class="player-turn"></h3>
+
+    <div class = "gameboard">
+        <div class="column">
+            <div class = "row">
+                <div id = "0" class="grid"><img src="./Grid/UL.png" ></div>
+                <div id = "1" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "2" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "3" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "4" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "5" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "6" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "7" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "8" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "9" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "10" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "11" class="grid"><img src="./Grid/Top.png" ></div>
+                <div id = "12" class="grid"><img src="./Grid/UR.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "13" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "14" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "15" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "16" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "17" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "18" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "19" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "20" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "21" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "22" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "23" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "24" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "25" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "26" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "27" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "28" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "29" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "30" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "31" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "32" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "33" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "34" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "35" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "36" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "37" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "38" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "39" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "40" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "41" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "42" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "43" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "44" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "45" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "46" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "47" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "48" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "49" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "50" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "51" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "52" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "53" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "54" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "55" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "56" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "57" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "58" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "59" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "60" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "61" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "62" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "63" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "64" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "65" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "66" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "67" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "68" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "69" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "70" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "71" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "72" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "73" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "74" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "75" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "76" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "77" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "78" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "79" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "80" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "81" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "82" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "83" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "84" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "85" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "86" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "87" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "88" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "89" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "90" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "91" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "92" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "93" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "94" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "95" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "96" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "97" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "98" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "99" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "100" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "101" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "102" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "103" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "104" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "105" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "106" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "107" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "108" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "109" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "110" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "111" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "112" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "113" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "114" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "115" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "116" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "117" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "118" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "119" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "120" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "121" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "122" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "123" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "124" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "125" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "126" class="grid"><img src="./Grid/Dot.png" ></div>
+                <div id = "127" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "128" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "129" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "130" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "131" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "132" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "133" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "134" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "135" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "136" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "137" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "138" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "139" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "140" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "141" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "142" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "143" class="grid"><img src="./Grid/L.png" ></div>
+                <div id = "144" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "145" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "146" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "147" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "148" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "149" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "150" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "151" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "152" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "153" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "154" class="grid"><img src="./Grid/Mid.png" ></div>
+                <div id = "155" class="grid"><img src="./Grid/R.png" ></div>
+            </div>
+            <div class = "row">
+                <div id = "156" class="grid"><img src="./Grid/BL.png" ></div>
+                <div id = "157" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "158" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "159" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "160" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "161" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "162" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "163" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "164" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "165" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "166" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "167" class="grid"><img src="./Grid/Bottom.png" ></div>
+                <div id = "168" class="grid"><img src="./Grid/BR.png" ></div>
+            </div>
+                
+        </div>
+
+
+
+    </div>
+    <button id="btn-reset" type="button" class="btn btn-secondary mt-5">Reset Game</button>
+
+</body>
+</html>
