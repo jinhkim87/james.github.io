@@ -65,44 +65,47 @@ const winConditions = [
     [116,128,140,152,164],
 ];
 
-// assign image to variables
 
-// const black = new Image ();
-// black.src = "./Grid/Black.png"
-
-// const white = new Image ();
-// white.src = "./Grid/White.png"
-
-let playerTurn = 'black'
-
-function checkWin() {
-    // check 5 in a row.
-    // yes? then throw win
-    console.log('12345')
-    for (let i = 0; i < winConditions.length; i++){
-        if (winConditions[i] >= 0) {
-            alert ("we have a winner!");
-        }
-    }
-}
-
-    // if playerTurn === 'black' place black and checkWin
-    // else place white
 
 $(document).ready(function(){
-    $("img").click(function(){
-        if (playerTurn === 'black') {
-            $(this).attr("src", "./Grid/Black.png"); 
-            $(this).addClass('unclickable')
-    
-            playerTurn = 'white';
-            return checkWin()
-        } else {
-            $(this).attr("src", "./Grid/White.png");
-            $(this).addClass('unclickable') 
-            
-            playerTurn = 'black';
-            return checkWin();
+    $('.gameboard, .infoBox').hide();
+    $('#startscreen').click(function(){
+        $($(this)).hide();
+        $('.gameboard, .infoBox').show('slow', function() {
+
+        let playerTurn = 'black'
+
+        function checkWin() {
+            // check 5 in a row.
+            // yes? then throw win
+            for (let i = 0; i < winConditions.length; i++){
+                if (winConditions[i] >= 0) {
+                    alert ("we have a winner!");
+                }
+            }
         }
-    });    
-});
+
+            // if playerTurn === 'black' place black and checkWin
+            // else place white
+
+        $(document).ready(function(){
+            $("img").click(function(){
+                if (playerTurn === 'black') {
+                    $(this).attr("src", "./Grid/Black.png"); 
+                    $(this).addClass('unclickable')
+            
+                    playerTurn = 'white';
+                    return checkWin()
+                } else {
+                    $(this).attr("src", "./Grid/White.png");
+                    $(this).addClass('unclickable') 
+                    
+                    playerTurn = 'black';
+                    return checkWin();
+                }
+            });    
+        });
+
+        })
+    })
+})
