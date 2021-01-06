@@ -2,24 +2,34 @@ body {
   text-align: center;
 }
 
+h1 {
+  color: #f8f8ff;
+  font-family: "Audiowide", cursive;
+  font-size: 5rem;
+  margin: 0px;
+}
 img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .row {
   display: flex;
   padding: 0px;
-  height: 50px;
+  height: 40px;
 }
 
 .column {
   padding: 0px;
 }
 
+.unclickable {
+  pointer-events: none;
+}
+
 .gameboard {
-  border: 20px solid gray;
-  max-width: 650px;
+  border: 20px solid white;
+  max-width: 520px;
   width: 100%;
   margin: auto;
   height: 100%;
@@ -29,5 +39,17 @@ img {
 }
 
 body {
-  background-image: "./Grid/background.jpg";
+  background-image: url("./Grid/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#btn-reset {
+  margin: 20px;
+  font-size: large;
+  padding: 10px;
+}
+
+.grid {
+  cursor: pointer;
 }
