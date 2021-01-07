@@ -117,14 +117,14 @@ $(document).ready(function(){
             $("img").click(function(){
                 $('audio#click1')[0].play()
                 if (playerTurn === 'black') {
-                    $(this).attr("src", "./Grid/Black.png"); 
+                    $(this).attr("src", "./Omok/Grid/Black.png"); 
                     $(this).addClass('unclickable')
             
                     playerTurn = 'white';
                     $playerTurnMessage.text(`${playerTurn} stone's turn!`)
                     return checkWin();
                 } else {
-                    $(this).attr("src", "./Grid/White.png");
+                    $(this).attr("src", "./Omok/Grid/White.png");
                     $(this).addClass('unclickable') 
                     
                     playerTurn = 'black';
