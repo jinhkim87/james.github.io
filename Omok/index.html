@@ -12,9 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&display=swap" rel="stylesheet">
-  </head>
+</head>
 <body>
     <h1>OMOK</h1>
+
+    <audio id="click1">
+        <source src = "Audio/Sound.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="startSound">
+        <source src = "Audio/StartSound.mp3" type="audio/mp3">
+    </audio>
 
     <div id="startscreen">
         <p class="start">Omok, a Korean board game, originated from Japan ("Gomoku") is a board game where you place 5 stones in a row to win!</p>
@@ -24,9 +32,11 @@
                 <li>Play defense by blocking your opponent</li>
                 <li>Have fun!</li>
             </ol>
-        <p class="start1">Click to Start!</p>
+            <br></br>
+            <br></br>
+        <button class="start1"> Click Here to Start</button>
       </div>
-
+<div class="d-flex">
     <div class = "gameboard">
         <div class="column">
             <div class = "row">
@@ -229,8 +239,12 @@
 
     </div>
     <div class = "infoBox">
+        <h3 id = "player-turn-message"></h3>
+        
         
     </div>
+</div>
+
 
 </body>
 </html>

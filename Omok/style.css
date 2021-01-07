@@ -8,6 +8,14 @@ h1 {
   font-size: 5rem;
   margin: 0px;
 }
+
+h3 {
+  font-family: "Audiowide", cursive;
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+}
 img {
   width: 40px;
   height: 40px;
@@ -31,7 +39,7 @@ img {
   border: 20px solid white;
   max-width: 520px;
   width: 100%;
-  margin: auto;
+
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -40,14 +48,20 @@ img {
 }
 
 .infoBox {
-  display: inline-block;
-  background: gray;
+  display: block;
+  background: #f0fff0;
   align-items: center;
   justify-content: center;
+  margin-left: 50px;
   max-width: 200px;
   width: 100%;
-  height: 520px;
-  border-radius: 50px;
+  height: 560px;
+  border-radius: 25px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
 }
 
 body {
@@ -93,6 +107,15 @@ li {
 .start1 {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: bold;
-  font-size: 60px;
-  color: red;
+  font-size: 50px;
+  color: white;
+  border: none;
+  background-color: red;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.start1:focus {
+  outline: none;
+  box-shadow: none;
 }

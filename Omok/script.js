@@ -65,24 +65,49 @@ const winConditions = [
     [116,128,140,152,164],
 ];
 
+const players = {
+    '1': 'Black',
+    '-1': 'White',
+    '0': ''
+}
+
+const $playerTurnMessage = $('#player-turn-message');
 
 
 $(document).ready(function(){
     $('.gameboard, .infoBox').hide();
-    $('#startscreen').click(function(){
-        $($(this)).hide();
+    $('.start1').click(function(){
+        $('audio#startSound')[0].play()
+        $('#startscreen').hide();
         $('.gameboard, .infoBox').show('slow', function() {
 
         let playerTurn = 'black'
-
+        $playerTurnMessage.text(`${playerTurn} stone's turn!`)
+        
         function checkWin() {
             // check 5 in a row.
             // yes? then throw win
-            for (let i = 0; i < winConditions.length; i++){
-                if (winConditions[i] >= 0) {
-                    alert ("we have a winner!");
+            for ( let i = 0; i < winConditions.length; i++ ) {
+
+                const winCond = winConditions[i];
+            
+                const points = winCond.reduce((acc, curr) => {
+                  return acc + gameState[curr];
+                }, 0);
+            
+                if ( points === 5 ) {
+                  return 1;
+            
+                } else if (points === -5) {
+            
+                  return -1;
                 }
-            }
+            
+              }
+            
+              if ( gameState.includes( 0 ) ) return 0;
+            
+              return 'T'
         }
 
             // if playerTurn === 'black' place black and checkWin
@@ -90,17 +115,20 @@ $(document).ready(function(){
 
         $(document).ready(function(){
             $("img").click(function(){
+                $('audio#click1')[0].play()
                 if (playerTurn === 'black') {
                     $(this).attr("src", "./Grid/Black.png"); 
                     $(this).addClass('unclickable')
             
                     playerTurn = 'white';
-                    return checkWin()
+                    $playerTurnMessage.text(`${playerTurn} stone's turn!`)
+                    return checkWin();
                 } else {
                     $(this).attr("src", "./Grid/White.png");
                     $(this).addClass('unclickable') 
                     
                     playerTurn = 'black';
+                    $playerTurnMessage.text(`${playerTurn} stone's turn!`)
                     return checkWin();
                 }
             });    
