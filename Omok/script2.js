@@ -100,7 +100,7 @@ const winConditions = [
  $(document).ready(function(){
   $('#game-board, #player-turn-message').hide();
   $('.start1').click(function(){
-      // $('audio#startSound')[0].play()
+      $('audio#startSound')[0].play()
       $('#startscreen').hide();
       $('#game-board, #player-turn-message').show('slow', function() {
       })
@@ -110,6 +110,8 @@ const winConditions = [
 
   
 const handleClick = function (e) {
+
+  $('audio#click1')[0].play()
 
   const selectIdx = parseInt( e.target.id );
 
@@ -156,18 +158,23 @@ const checkWinner = function () {
 const renderMessage = function () {
 
   if ( !winner ) {
-    $playerTurnMessage.text(`${KEYS[ currentTurn ]}'s Turn`);
-
+    if (currentTurn === 1){
+      $playerTurnMessage.text("Black Stone's Turn");
+      } else if (currentTurn === -1){
+        $playerTurnMessage.text("White Stone's Turn");
+      }
   } else if ( winner === 'T' ) {
 
     $playerTurnMessage.text('ITS A TIE !'); 
   } else {
-
-    $playerTurnMessage.text(`${KEYS[ winner ]}'s HAS WON !`);
+    if (winner === 1) {
+     $playerTurnMessage.text("Black stone wins!");
+    } else  if (winner === -1) {
+     $playerTurnMessage.text("White stone wins!");
   }
 
 };
- 
+}
   
 const renderBoard = function () {
   
