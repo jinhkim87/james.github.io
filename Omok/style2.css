@@ -1,7 +1,3 @@
-body {
-  text-align: center;
-}
-
 h1 {
   color: #f8f8ff;
   font-family: "Audiowide", cursive;
@@ -16,34 +12,26 @@ h3 {
   color: black;
   text-transform: uppercase;
 }
-img {
-  width: 40px;
-  height: 40px;
+
+body {
+  font-family: "Chelsea Market", cursive;
 }
 
-.row {
-  display: flex;
-  padding: 0px;
-  height: 40px;
+main {
+  height: 100vh;
+  width: 100vw;
+  padding: 36px 36px;
 }
 
-.column {
-  padding: 0px;
-}
-
-.unclickable {
-  pointer-events: none;
-}
-
-.gameboard {
+#game-board {
   border: 20px solid white;
-  max-width: 520px;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
   border-radius: 10px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  background-image: url(./Grid/Board.png);
+  background-size: cover;
 }
 
 .infoBox {
@@ -62,21 +50,24 @@ img {
   display: flex;
   justify-content: center;
 }
+.box {
+  cursor: pointer;
+}
+
+.box {
+  /* background: #444; */
+  border: 0px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
 
 body {
   background-image: url("./Grid/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-#btn-reset {
-  margin: 20px;
-  font-size: large;
-  padding: 10px;
-}
-
-.grid {
-  cursor: pointer;
 }
 
 #startscreen {
@@ -112,6 +103,7 @@ li {
   background-color: red;
   border-radius: 12px;
   cursor: pointer;
+  position: relative;
 }
 
 .start1:focus {

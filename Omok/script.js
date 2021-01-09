@@ -65,11 +65,15 @@ const winConditions = [
     [116,128,140,152,164],
 ];
 
-const players = {
-    '1': 'Black',
-    '-1': 'White',
-    '0': ''
+const KEYS = {
+    '1': './Omok/Grid/Black.png',
+    '-1': './Omok/Grid/White.png',
+    'null': ''
 }
+
+let gameState;
+let winner;
+let currentTurn;
 
 const $playerTurnMessage = $('#player-turn-message');
 
@@ -89,9 +93,9 @@ $(document).ready(function(){
             // yes? then throw win
             for ( let i = 0; i < winConditions.length; i++ ) {
 
-                const winCond = winConditions[i];
+                const winCombo = winConditions[i];
             
-                const points = winCond.reduce((acc, curr) => {
+                const points = winCombo.reduce((acc, curr) => {
                   return acc + gameState[curr];
                 }, 0);
             
@@ -102,12 +106,8 @@ $(document).ready(function(){
             
                   return -1;
                 }
-            
               }
-            
-              if ( gameState.includes( 0 ) ) return 0;
-            
-              return 'T'
+              
         }
 
             // if playerTurn === 'black' place black and checkWin
